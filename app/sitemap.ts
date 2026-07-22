@@ -13,7 +13,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
 
-    // ── Event / Audience Pages ────────────────────────────────────────
+    // ── Pillar Pages ─────────────────────────────────────────────────
+    // Lead-capture is the primary differentiator — highest priority after homepage
+    {
+      url: `${baseUrl}/lead-capture`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+
+    // ── Core Event Pages ─────────────────────────────────────────────
     {
       url: `${baseUrl}/weddings`,
       lastModified: now,
@@ -21,62 +30,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/quinceaneras`,
+      url: `${baseUrl}/corporate-events`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/event-planners`,
+      url: `${baseUrl}/quinceaneras-sweet-16`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/birthdays`,
+      url: `${baseUrl}/celebrations`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
 
-    // ── Phase 1 City / Location Pages ────────────────────────────────
+    // ── Educational Pillar ───────────────────────────────────────────
     {
-      url: `${baseUrl}/alpharetta`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/marietta`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/sandy-springs`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/duluth`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/norcross`,
+      url: `${baseUrl}/atlanta-photo-booth-guide`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
 
-    // ── Phase 2 City Pages (placeholders — activate when pages built) ─
-    // { url: `${baseUrl}/roswell`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/decatur`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/kennesaw`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/johns-creek`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/sweet-16`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/graduations`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    // ── Legal ────────────────────────────────────────────────────────
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+
+    // ── Phase 2 City Pages (activate after foundation pages are solid) ─
+    // Uncomment each when the page has been fully rewritten to meet quality standard
+    // { url: `${baseUrl}/alpharetta`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    // { url: `${baseUrl}/marietta`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    // { url: `${baseUrl}/duluth-norcross`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
   ]
 }
