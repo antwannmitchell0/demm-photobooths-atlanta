@@ -1,0 +1,58 @@
+:root {
+  --ink: #071426;
+  --gold: #2f80ed;
+  --cream: #f7fbff;
+  --muted: #aab9cc;
+  --line: #294665;
+}
+
+body { background: #071426; }
+.nav { background: linear-gradient(180deg, rgba(7,20,38,.86), transparent); }
+.brand span { color: #63b3ff; }
+.button, .mobile-cta { background: linear-gradient(135deg, #37a2ff, #2468e8); color: white; box-shadow: 0 10px 30px rgba(47,128,237,.25); }
+.button:hover { background: linear-gradient(135deg, #5db6ff, #3479f2); }
+.hero { background: radial-gradient(circle at 82% 32%, #235d91 0, #102f54 25%, #071426 58%); }
+.hero-card { border-color: rgba(99,179,255,.55); background: #0b2038; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+.hero-card .photo { background: radial-gradient(circle at 50% 15%, #ffffff 0, #7dd3fc 5%, #2563a7 21%, #0b2038 60%); }
+.silhouette { background: #06111f; box-shadow: 0 0 35px rgba(73,170,255,.5); }
+.flash, .hero-card b, .trust span:before, .eyebrow, em { color: #63b3ff; }
+.proof { background: linear-gradient(90deg, #2563eb, #38a8ed); color: white; }
+.gallery-section, .faq { background: #f7fbff; }
+.gallery-section em, .faq em { color: #2475d8; }
+.tile { background: #123455; position: relative; }
+.tile:before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(5, 15, 30, 0.85) 0%, rgba(5, 15, 30, 0.25) 60%, transparent 100%) !important; z-index: 1; pointer-events: none; }
+.tile b, .tile span { position: relative; z-index: 2; }
+.t1 { background: url('/images/wedding-moment.png') center/cover no-repeat !important; }
+.t2 { background: url('/images/corporate-branding.png') center/cover no-repeat !important; }
+.t3 { background: url('/images/mirror-booth..png') center/cover no-repeat !important; }
+.t4 { background: url('/images/guest-fun.png') center/cover no-repeat !important; }
+
+.hero-card .photo { background: url('/images/hero-energy.png') center/cover no-repeat !important; }
+.host-visual { background: url('/images/mirror-booth..png') center/cover no-repeat !important; z-index: 1; }
+.host-visual span { z-index: 2; }
+.host-mark { display: none; }
+.process { background: #091a2e; }
+.steps article { background: #0b2038; }
+.area { background: linear-gradient(120deg,#dff3ff,#b9e6ff 55%,#ffd9c9); color: #0b2440; }
+.area .eyebrow { color: #1e63ac; }
+.area em { color: #d65f43; }
+form { background: #0c223b; border-color: #294665; }
+input, select, textarea { background: #07182b; border-color: #375879; }
+.promise { border-color: #ff8268; }
+.success { border-color: #63b3ff; }
+.success > span { border-color: #63b3ff; color: #63b3ff; }
+.faq summary span { color: #2475d8; }
+footer { background: #06111f; }
+
+@media (max-width: 900px) {
+  .nav { background: rgba(7,20,38,.94); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused !important;
+}
