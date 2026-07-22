@@ -8,7 +8,8 @@ const events = [
   ["Weddings", "An elegant, interactive experience—and a keepsake from the celebration.", "/weddings"],
   ["Birthdays & Celebrations", "Bring the fun, capture the personalities, and keep every guest engaged.", "/celebrations"],
   ["Corporate & Brand Events", "Custom branding, professional setup, and optional guest-registration for business events.", "/corporate-events"],
-  ["Quinceañeras & Sweet 16s", "A milestone deserves a luxury experience. Custom prints, warm hosting, bilingual attendant available.", "/quinceaneras-sweet-16"],
+  ["Quinceañeras & Sweet 16s", "A milestone deserves a luxury experience. Custom prints, warm professional hosting, and a photo they'll cherish forever.", "/quinceaneras-sweet-16"],
+
   ["Galas & Community Events", "Help guests connect, celebrate, and leave with a memory from the mission.", "/corporate-events"],
 ];
 
@@ -51,7 +52,7 @@ export default function Home() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "115"
+      "reviewCount": "114"
     }
   };
 
@@ -67,7 +68,7 @@ export default function Home() {
 
     <GoogleReviewsTicker />
 
-    <section className="proof"><span>Elevated Guest Experiences</span><span>Professionally Hosted</span><span>115+ Google Reviews · 5.0 ★</span><span>Serving Metro Atlanta</span></section>
+    <section className="proof"><span>Elevated Guest Experiences</span><span>Professionally Hosted</span><span>114+ Google Reviews · 5.0 ★</span><span>Serving Metro Atlanta</span></section>
 
     <section className="section split" id="experience"><div><p className="eyebrow">THE DEMM EXPERIENCE</p><h2>We Don't Just Set Up a Booth. <em>We Bring the Energy.</em></h2></div><div><p className="large">Your event deserves more than equipment placed in a corner. DEMM creates an interactive photo experience that invites guests in, keeps the energy moving, and gives everyone something worth sharing and remembering.</p><ul className="checks"><li>Professional on-site attendant</li><li>High-quality photo capture and flattering lighting</li><li>Custom event-branded photo design</li><li>Instant digital sharing via text or email</li><li>Delivery, setup, operation, and breakdown</li><li>Optional prints, backdrops, props, and premium enhancements</li><li>Optional guest-registration for qualifying business events</li></ul></div></section>
 

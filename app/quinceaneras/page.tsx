@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const quinceFaqs = [
   [
-    "Do you offer bilingual (Spanish/English) photo booth attendants for quinceañeras?",
-    "Yes, absolutely. We know how important family is, and we offer bilingual attendants who speak both English and Spanish seamlessly so every guest feels welcome and comfortable using the photo booth.",
+    "Do you provide an attendant who can assist Spanish-speaking guests at quinceañeras?",
+    "Our attendant will do their best to make every guest feel welcome. If Spanish-language support is important for your event, please let us know when you book so we can plan accordingly.",
   ],
   [
     "Can we customize the photo prints with my daughter's name and quinceañera date?",
@@ -34,7 +34,7 @@ const quinceFaqs = [
   ],
   [
     "What is included in a quinceañera photo booth package?",
-    "Our quinceañera packages typically include the luxury mirror booth, a bilingual attendant, custom print templates, unlimited digital sharing (SMS/Email), premium props, and optional keepsake albums fit for a princess.",
+    "Our quinceañera packages typically include the luxury mirror booth, a professional attendant, custom print templates, unlimited digital sharing (SMS/Email), premium props, and optional keepsake albums fit for a princess.",
   ],
 ];
 
@@ -90,7 +90,7 @@ export default function QuinceanerasPage() {
             Luxury Quinceañera Photo Booth Rental in <em>Atlanta, GA</em>
           </h1>
           <p className="lead">
-            Give your daughter the princess experience she deserves. Our luxury mirror photo booths bring interactive fun, beautiful studio lighting, and bilingual attendants to sweet 15 celebrations across Gwinnett County and Metro Atlanta.
+            Give your daughter the princess experience she deserves. Our luxury mirror photo booths bring interactive fun, beautiful studio lighting, and professional, warm attendants to sweet 15 celebrations across Gwinnett County and Metro Atlanta.
           </p>
           <div className="actions">
             <a className="button" href="#quote">
@@ -112,7 +112,7 @@ export default function QuinceanerasPage() {
             </a>
           </div>
           <div className="trust">
-            <span>Bilingual English/Spanish Attendants</span>
+            <span>Professional, Warm Attendant</span>
             <span>Custom Themed Overlays</span>
             <span>DSLR Studio Quality</span>
             <span>Elegant Setup</span>
@@ -158,7 +158,7 @@ export default function QuinceanerasPage() {
             Sabemos lo importante que es la celebración de los 15 años para nuestra comunidad hispana. Nuestro equipo ofrece un servicio de primer nivel con asistentes bilingües, listos para hacer de tu fiesta una experiencia inolvidable.
           </p>
           <p>
-            Desde Norcross hasta Duluth, estamos orgullosos de ser parte de sus momentos más especiales. We warmly welcome families looking for a magical, bilingual photo booth experience that honors tradition and celebrates this beautiful milestone.
+            Desde Norcross hasta Duluth, estamos orgullosos de ser parte de sus momentos más especiales. We warmly welcome families looking for a magical photo booth experience that honors tradition and celebrates this beautiful milestone.
           </p>
         </div>
       </section>
@@ -176,7 +176,7 @@ export default function QuinceanerasPage() {
             A quinceañera is a once-in-a-lifetime milestone. We provide a glamorous, interactive mirror booth that guests of all ages will love, creating physical prints and digital memories to cherish forever.
           </p>
           <ul className="checks">
-            <li>Bilingual attendants for seamless Spanish and English interactions</li>
+            <li>Warm, professional attendant present throughout your event</li>
             <li>Custom print templates featuring the birthday girl's name and theme</li>
             <li>Floor-to-ceiling luxury interactive mirror booth</li>
             <li>Flattering studio lighting fit for elegant ballgowns</li>
@@ -208,7 +208,7 @@ export default function QuinceanerasPage() {
             Tell us about your event to receive a custom quote and verify our availability for your date.
           </p>
           <div className="promise">
-            <b>Dedicated Bilingual Support.</b>
+            <b>Dedicated Professional Support.</b>
             <span>Every package is designed to fit your venue, theme, and timeline perfectly.</span>
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function QuinceanerasPage() {
           <small>QUINCEAÑERA PHOTO BOOTHS • ATLANTA</small>
         </div>
         <p>
-          Making quinceañeras magical. We bring elegance, fun, and bilingual service to celebrations across Metro Atlanta.
+          Making quinceañeras magical. We bring elegance, fun, and warm professional hosting to celebrations across Metro Atlanta.
         </p>
         <div>
           <a href="/">Home</a>

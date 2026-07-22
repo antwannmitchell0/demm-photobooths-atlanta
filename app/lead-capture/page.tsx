@@ -350,7 +350,7 @@ export default function LeadCapturePage() {
             Tell us about your event and we'll confirm whether the lead-capture experience is the right fit.
           </p>
           <div className="promise">
-            <b>115+ Google reviews · 5.0 stars · Serving Metro Atlanta</b>
+            <b>114+ Google reviews · 5.0 stars · Serving Metro Atlanta</b>
             <span>
               Prefer to call? <a href="tel:8132148098" style={{ color: "inherit", textDecoration: "underline" }}>813-214-8098</a>
             </span>

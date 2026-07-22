@@ -25,8 +25,8 @@ const norcrossFaqs = [
     "We cater to all types of celebrations in Norcross, including elegant weddings in the Historic District, vibrant quinceañeras, corporate events along Buford Highway, birthdays, and community gatherings.",
   ],
   [
-    "Do you offer bilingual service for Spanish-speaking clients in Norcross?",
-    "Absolutely. We understand the rich multicultural makeup of Norcross. We provide bilingual (English and Spanish) attendants to ensure seamless communication and a welcoming experience for all your guests.",
+    "Can you help make Spanish-speaking guests feel comfortable at Norcross events?",
+    "Our attendant is focused on making every guest feel welcome and comfortable. If language accessibility is a priority for your event, please mention it when you reach out and we will do our best to accommodate.",
   ],
   [
     "How early do I need to book for a Norcross event?",
@@ -113,7 +113,7 @@ export default function NorcrossPage() {
           </div>
           <div className="trust">
             <span>Serving Historic Norcross</span>
-            <span>Bilingual English/Spanish Support</span>
+            <span>Inclusive, Welcoming Experience</span>
             <span>Premium Print Overlays</span>
             <span>Engaging Local Attendants</span>
           </div>
@@ -159,7 +159,7 @@ export default function NorcrossPage() {
           </p>
           <ul className="checks">
             <li>Perfect for the Norcross Wedding District's historic charm</li>
-            <li>Bilingual staff ready to serve the diverse Latin & Hispanic communities</li>
+            <li>Attendant focused on creating a welcoming experience for all guests</li>
             <li>Ideal for large celebrations along Jimmy Carter Blvd & Buford Highway</li>
             <li>Studio-quality lighting for flawless photos in any indoor or outdoor venue</li>
             <li>Instant digital sharing for guests to post instantly</li>
