@@ -50,7 +50,7 @@ export default function QuinceanerasPage() {
       "url": "https://www.demmphotobooths.com",
     },
     "areaServed": "Norcross, Duluth, Lawrenceville, Buford, Gwinnett County, Metro Atlanta, Georgia",
-    "description": "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, bilingual attendant.",
+    "description": "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, professional attendant.",
   };
 
   return (

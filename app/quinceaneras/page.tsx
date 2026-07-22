@@ -5,7 +5,7 @@ import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 export const metadata: Metadata = {
   title: "Quinceañera Photo Booth Rental Atlanta | DEMM Photo Booths",
   description:
-    "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, bilingual attendant.",
+    "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, professional attendant.",
   keywords: [
     "quinceañera photo booth rental Atlanta",
     "quinceanera photo booth Norcross",
@@ -50,7 +50,7 @@ export default function QuinceanerasPage() {
       "url": "https://www.demmphotobooths.com",
     },
     "areaServed": "Norcross, Duluth, Lawrenceville, Buford, Gwinnett County, Metro Atlanta, Georgia",
-    "description": "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, bilingual attendant.",
+    "description": "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, professional attendant.",
   };
 
   return (
