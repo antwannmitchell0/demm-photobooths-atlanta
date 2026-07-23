@@ -53,8 +53,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/atlanta-photo-booth-guide`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.85,
     },
+
 
     // ── Legal ────────────────────────────────────────────────────────
     {

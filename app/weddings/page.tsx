@@ -39,19 +39,29 @@ const weddingFaqs = [
 ];
 
 export default function WeddingsPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Luxury Wedding Photo Booth Rental Atlanta",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "DEMM Photo Booths Atlanta",
-      "telephone": "+1-813-214-8098",
-      "url": "https://www.demmphotobooths.com",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Luxury Wedding Photo Booth Rental Atlanta",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "DEMM Photo Booths Atlanta",
+        "telephone": "+1-813-214-8098",
+        "url": "https://www.demmphotobooths.com",
+      },
+      "areaServed": "Atlanta, Buckhead, Midtown, Alpharetta, Sandy Springs, Decatur, Metro Atlanta",
+      "description": "Floor-to-ceiling luxury DSLR magic mirror photo booth rentals for wedding receptions across Atlanta.",
     },
-    "areaServed": "Atlanta, Buckhead, Midtown, Alpharetta, Sandy Springs, Decatur, Metro Atlanta",
-    "description": "Floor-to-ceiling luxury DSLR magic mirror photo booth rentals for wedding receptions across Atlanta.",
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.demmphotobooths.com" },
+        { "@type": "ListItem", "position": 2, "name": "Wedding Photo Booth Atlanta", "item": "https://www.demmphotobooths.com/weddings" }
+      ]
+    }
+  ];
 
   return (
     <main>
@@ -68,8 +78,8 @@ export default function WeddingsPage() {
         <nav aria-label="Wedding navigation">
           <a href="/">Home</a>
           <a href="#experience">The Experience</a>
-          <a href="/event-planners">Event Planners</a>
-          <a href="/birthdays">Parties</a>
+          <a href="/corporate-events">Corporate</a>
+          <a href="/celebrations">Parties</a>
           <a href="https://www.welcome2atlantaevents.com/find" target="_blank" rel="noopener noreferrer">
             Find My Photos
           </a>
@@ -140,7 +150,7 @@ export default function WeddingsPage() {
 
       <section className="proof">
         <span>5.0 Star Rated Wedding Entertainment</span>
-        <span>Trusted By Atlanta Brides & Planners</span>
+        <span>114+ Google Reviews · 5.0 Stars</span>
         <span>Serving All Metro Atlanta Venues</span>
       </section>
 
@@ -157,8 +167,32 @@ export default function WeddingsPage() {
             From your cocktail hour to the final dance, DEMM creates an interactive experience that gets your guests off their feet, laughing together, and taking home a physical print they'll frame on their fridge forever.
           </p>
           <ul className="checks">
-            <li>Floor-to-ceiling interactive Magic Mirror design</li><li>Studio-grade DSLR photos with flattering beauty lighting</li><li>Customized print layout matching your wedding invitations</li><li>Instant SMS/Email photo sharing for your guests</li><li>Handcrafted wedding scrapbook guestbook option</li><li>Dressed-for-the-occasion professional on-site attendant</li>
+            <li>Floor-to-ceiling interactive Magic Mirror design</li><li>Studio-grade DSLR photos with flattering beauty lighting</li><li>Customized print layout matching your wedding invitations</li><li>Instant SMS/Email photo sharing for your guests</li><li>Handcrafted wedding scrapbook guestbook option<br/><a href="/atlanta-photo-booth-guide" style={{color: '#a78bfa', fontSize: '13px'}}>Read the complete Atlanta photo booth guide →</a></li><li>Dressed-for-the-occasion professional on-site attendant</li>
           </ul>
+        </div>
+      </section>
+
+      {/* What to Expect Timeline */}
+      <section className="process" id="timeline">
+        <div className="section-title">
+          <p className="eyebrow">WHAT TO EXPECT</p>
+          <h2>
+            Your Wedding Day <em>Timeline.</em>
+          </h2>
+        </div>
+        <div className="steps">
+          {[
+            ["01", "Setup", "DEMM arrives 60–90 minutes before guests. We confirm placement, power, and backdrop position with the venue coordinator. The booth is fully tested before any guests arrive."],
+            ["02", "Cocktail Hour", "The booth is typically most active during cocktail hour when guests have a drink in hand and are ready to have fun. This is when the attendant encourages group participation and energy builds."],
+            ["03", "Reception", "The booth continues through dinner and dancing. We manage guest flow, keep props tidy, and operate the guestbook during quieter moments."],
+            ["04", "End of Night", "Quiet, efficient breakdown after the last photo is taken. We coordinate with the venue on teardown. You leave with your guestbook and the memories."],
+          ].map((x) => (
+            <article key={x[0]}>
+              <b>{x[0]}</b>
+              <h3>{x[1]}</h3>
+              <p>{x[2]}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -224,6 +258,33 @@ export default function WeddingsPage() {
         </p>
       </section>
 
+      {/* Questions to Ask Before Booking Any Wedding Photo Booth */}
+      <section className="section" id="questions" style={{ padding: "80px 24px", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+          <p className="eyebrow">BE PREPARED</p>
+          <h2 style={{ fontSize: "2.5rem", marginBottom: "16px" }}>
+            Questions to Ask Before Booking <em>Any Wedding Photo Booth.</em>
+          </h2>
+        </div>
+        <div className="steps" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
+          {[
+            "What type of booth is this — open-air, mirror, or enclosed?",
+            "Can I see a physical sample of your print quality and paper?",
+            "Will you provide a custom print design proof before the wedding day?",
+            "Who specifically will be the attendant, and are they the same person setting up?",
+            "What is your process if the equipment fails or the internet goes down?",
+            "Does the quote include setup, breakdown, travel, and print design — or are those separate?",
+            "What is your cancellation and rescheduling policy?",
+            "Do you carry liability insurance and can you provide a COI for the venue?",
+          ].map((q, i) => (
+            <article key={i} style={{ background: "rgba(255,255,255,0.03)", padding: "24px", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.05)", textAlign: "left" }}>
+              <b style={{ color: "#a78bfa", fontSize: "14px", display: "block", marginBottom: "8px" }}>Question {i + 1}</b>
+              <p style={{ margin: 0, fontSize: "16px", lineHeight: "1.5" }}>{q}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Interactive AI Concierge Quote Form */}
       <section className="quote" id="quote">
         <div className="quote-copy">
@@ -243,6 +304,7 @@ export default function WeddingsPage() {
           <AIEventConcierge />
         </div>
       </section>
+      <p style={{textAlign:'center', marginTop:'16px', marginBottom: '80px', color:'rgba(255,255,255,0.5)', fontSize:'14px'}}>Also serving <a href='/corporate-events' style={{color:'#a78bfa'}}>corporate events</a>, <a href='/celebrations' style={{color:'#a78bfa'}}>birthday parties</a>, and <a href='/quinceaneras-sweet-16' style={{color:'#a78bfa'}}>quinceañeras & sweet 16s</a> across Metro Atlanta.</p>
 
       {/* FAQs */}
       <section className="faq" id="faq">
@@ -276,9 +338,11 @@ export default function WeddingsPage() {
         </p>
         <div>
           <a href="/">Home</a>
-          <a href="/event-planners">Event Planners</a>
-          <a href="/birthdays">Birthday Parties</a>
+          <a href="/corporate-events">Corporate Events</a>
+          <a href="/celebrations">Birthday Parties</a>
           <a href="#faq">FAQ</a>
+          <a href="/lead-capture">Lead Capture</a>
+          <a href="/privacy-policy">Privacy Policy</a>
         </div>
         <small>© 2026 DEMM Photo Booths Atlanta. All rights reserved. • Wedding Photo Booth Rental Atlanta</small>
       </footer>
