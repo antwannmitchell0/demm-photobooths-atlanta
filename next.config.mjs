@@ -2,7 +2,6 @@
 const nextConfig = {
   async redirects() {
     return [
-      // Old URL → New canonical URL (301 permanent redirects)
       {
         source: '/event-planners',
         destination: '/corporate-events',
@@ -22,4 +21,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
