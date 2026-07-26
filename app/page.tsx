@@ -68,7 +68,7 @@ export default function Home() {
 
     <GoogleReviewsTicker />
 
-    <section className="proof"><span>Elevated Guest Experiences</span><span>Professionally Hosted</span><span>114+ Google Reviews · 5.0 ★</span><span>Serving Metro Atlanta</span></section>
+    <section className="proof"><span>Elevated Guest Experiences</span><span>Professionally Hosted</span><span>134+ Google Reviews · 5.0 ★</span><span>Serving Metro Atlanta</span></section>
 
     <section className="section split" id="experience"><div><p className="eyebrow">THE DEMM EXPERIENCE</p><h2>We Don't Just Set Up a Booth. <em>We Bring the Energy.</em></h2></div><div><p className="large">Your event deserves more than equipment placed in a corner. DEMM creates an interactive photo experience that invites guests in, keeps the energy moving, and gives everyone something worth sharing and remembering.</p><ul className="checks"><li>Professional on-site attendant</li><li>High-quality photo capture and flattering lighting</li><li>Custom event-branded photo design</li><li>Instant digital sharing via text or email</li><li>Delivery, setup, operation, and breakdown</li><li>Optional prints, backdrops, props, and premium enhancements</li><li>Optional guest-registration for qualifying business events</li></ul></div></section>
 
