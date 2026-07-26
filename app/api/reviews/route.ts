@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 
-// Real verified Google reviews from DEMM Photo Booths Google Business Profile
 const REAL_GOOGLE_REVIEWS = [
   {
     id: "1",
@@ -47,15 +46,24 @@ const REAL_GOOGLE_REVIEWS = [
 ];
 
 export async function GET() {
-  const apiKey = "AIzaSyDVsi4UKA-b-7OHSlMakCHtk03fDEWf5zQ";
-  const placeId = "ChIJx3AH0GnADoYR9RV59YzsTIN";
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+  const placeId = process.env.GOOGLE_PLACE_ID;
+
+  if (!apiKey || !placeId) {
+    return NextResponse.json({
+      name: "DEMM Photo Booths",
+      rating: 5.0,
+      totalReviews: 134,
+      reviews: REAL_GOOGLE_REVIEWS,
+    });
+  }
 
   try {
     const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&key=${apiKey}`;
-    const detailsRes = await fetch(detailsUrl);
+    const detailsRes = await fetch(detailsUrl, { next: { revalidate: 3600 } });
     const detailsData = await detailsRes.json();
 
-    if (detailsData.status === "OK" && detailsData.result && detailsData.result.reviews?.length > 0) {
+    if (detailsData.status === "OK" && detailsData.result?.reviews?.length > 0) {
       const result = detailsData.result;
       const reviews = result.reviews.map((r: any, idx: number) => ({
         id: String(idx + 1),
@@ -67,24 +75,23 @@ export async function GET() {
 
       return NextResponse.json({
         name: result.name,
-        rating: result.rating || 5.0,
-        totalReviews: result.user_ratings_total || 112,
+        rating: result.rating ?? 5.0,
+        totalReviews: result.user_ratings_total ?? 134,
         reviews,
       });
     }
 
-    // Return verified Google Business Profile reviews directly
     return NextResponse.json({
       name: "DEMM Photo Booths",
       rating: 5.0,
-      totalReviews: 112,
+      totalReviews: 134,
       reviews: REAL_GOOGLE_REVIEWS,
     });
-  } catch (err: any) {
+  } catch {
     return NextResponse.json({
       name: "DEMM Photo Booths",
       rating: 5.0,
-      totalReviews: 112,
+      totalReviews: 134,
       reviews: REAL_GOOGLE_REVIEWS,
     });
   }
