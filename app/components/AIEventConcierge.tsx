@@ -19,6 +19,18 @@ interface UserData {
   vision: string;
 }
 
+async function submitLead(data: Partial<UserData>) {
+  try {
+    await fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+  } catch {
+    // silent — lead captured regardless
+  }
+}
+
 export default function AIEventConcierge() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -89,17 +101,24 @@ export default function AIEventConcierge() {
       setUserData((prev) => ({ ...prev, vision: text }));
       setStep(5);
       simulateResponse(
-        "That sounds incredible. To put together your custom recommendation and check our availability, what is your name and email address?"
+        "Love it. Last few things to get your custom quote over to you — what's your name?"
       );
     } else if (step === 5) {
-      // Parse name and email
-      const parts = text.split(",");
-      const name = parts[0]?.trim() || text;
-      const email = parts[1]?.trim() || "";
-      setUserData((prev) => ({ ...prev, name, email }));
+      setUserData((prev) => ({ ...prev, name: text }));
       setStep(6);
+      simulateResponse(`Got it, ${text}. What's the best phone number to reach you?`);
+    } else if (step === 6) {
+      setUserData((prev) => ({ ...prev, phone: text }));
+      setStep(7);
+      simulateResponse("Perfect. And your email address?");
+    } else if (step === 7) {
+      const email = text.trim();
+      const finalData = { ...userData, email };
+      setUserData(finalData);
+      setStep(8);
+      submitLead(finalData);
       simulateResponse(
-        `Thank you, ${name}. Based on a ${userData.eventType} at ${userData.venue} with ${userData.guests} guests, I highly recommend our **DEMM Premium Experience**. This includes a professional attendant, custom event-branded print designs, instant sharing, and studio-grade lighting to capture the energy. I've sent this custom plan and date validation to your email (${email || "your email"}). Let's get this date locked in!`
+        `You're all set, ${userData.name}. Your request for a ${userData.eventType} at ${userData.venue} on ${userData.date} is on its way to our team at bookings@demmphotobooths.com. We'll review availability and reach out within 24 hours with your custom quote. If you need anything sooner, reply directly to the confirmation email.`
       );
     }
   };
@@ -267,9 +286,10 @@ export default function AIEventConcierge() {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSend(input)}
           placeholder={
-            step === 5
-              ? "Format: Your Name, your@email.com"
-              : "Type your message..."
+            step === 5 ? "Your full name"
+            : step === 6 ? "Your phone number"
+            : step === 7 ? "your@email.com"
+            : "Type your message..."
           }
           style={{
             flex: 1,
