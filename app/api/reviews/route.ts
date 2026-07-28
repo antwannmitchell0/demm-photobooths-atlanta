@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 const REAL_GOOGLE_REVIEWS = [
   {
     id: "1",
@@ -60,7 +62,7 @@ export async function GET() {
 
   try {
     const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&key=${apiKey}`;
-    const detailsRes = await fetch(detailsUrl, { next: { revalidate: 3600 } });
+    const detailsRes = await fetch(detailsUrl);
     const detailsData = await detailsRes.json();
 
     if (detailsData.status === "OK" && detailsData.result?.reviews?.length > 0) {
