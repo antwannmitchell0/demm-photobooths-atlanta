@@ -70,7 +70,6 @@ export default function GoogleReviewsTicker() {
           setReviews(data.reviews);
         }
         if (data.rating) setRating(data.rating);
-        if (data.totalReviews && data.totalReviews > totalCount) setTotalCount(data.totalReviews);
       })
       .catch(() => {
         // Keeps verified real reviews default

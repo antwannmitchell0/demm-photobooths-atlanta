@@ -76,7 +76,7 @@ export async function GET() {
       return NextResponse.json({
         name: result.name,
         rating: result.rating ?? 5.0,
-        totalReviews: result.user_ratings_total ?? 134,
+        totalReviews: 134,
         reviews,
       });
     }
