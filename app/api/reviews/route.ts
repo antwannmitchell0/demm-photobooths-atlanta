@@ -55,7 +55,7 @@ export async function GET() {
     return NextResponse.json({
       name: "DEMM Photo Booths",
       rating: 5.0,
-      totalReviews: 134,
+      totalReviews: 135,
       reviews: REAL_GOOGLE_REVIEWS,
     });
   }
@@ -78,7 +78,7 @@ export async function GET() {
       return NextResponse.json({
         name: result.name,
         rating: result.rating ?? 5.0,
-        totalReviews: 134,
+        totalReviews: 135,
         reviews,
       });
     }
@@ -86,14 +86,14 @@ export async function GET() {
     return NextResponse.json({
       name: "DEMM Photo Booths",
       rating: 5.0,
-      totalReviews: 134,
+      totalReviews: 135,
       reviews: REAL_GOOGLE_REVIEWS,
     });
   } catch {
     return NextResponse.json({
       name: "DEMM Photo Booths",
       rating: 5.0,
-      totalReviews: 134,
+      totalReviews: 135,
       reviews: REAL_GOOGLE_REVIEWS,
     });
   }

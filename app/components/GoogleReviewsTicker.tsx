@@ -58,7 +58,7 @@ const VERIFIED_REAL_REVIEWS: Review[] = [
 export default function GoogleReviewsTicker() {
   const [reviews, setReviews] = useState<Review[]>(VERIFIED_REAL_REVIEWS);
   const [rating, setRating] = useState<number>(5.0);
-  const [totalCount, setTotalCount] = useState<number>(134);
+  const [totalCount, setTotalCount] = useState<number>(135);
 
   const googleReviewUrl = "https://g.page/r/CfUVefWL7EyNEAE/review";
 
