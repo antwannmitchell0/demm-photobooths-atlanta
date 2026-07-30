@@ -150,7 +150,7 @@ export default function WeddingsPage() {
 
       <section className="proof">
         <span>5.0 Star Rated Wedding Entertainment</span>
-        <span>114+ Google Reviews · 5.0 Stars</span>
+        <span>135 Google Reviews · 5.0 Stars</span>
         <span>Serving All Metro Atlanta Venues</span>
       </section>
 
