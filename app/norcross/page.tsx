@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/norcross" },
   title: "Photo Booth Rental Norcross GA | DEMM Photo Booths",
   description:
     "DEMM Photo Booths brings luxury mirror photo booth rentals to Norcross, GA. Perfect for weddings, quinceañeras, corporate events & birthdays. Serving all of Gwinnett County.",

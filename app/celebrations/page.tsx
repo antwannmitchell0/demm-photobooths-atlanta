@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/celebrations" },
   title: "Birthday Party & Milestone Celebration Photo Booth Atlanta | DEMM",
   description:
     "Luxury mirror photo booth rentals for birthday parties and milestone celebrations in Atlanta. 30th, 40th, 50th birthdays, anniversaries, retirement parties & more.",

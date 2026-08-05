@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy-policy" },
   title: "Privacy Policy | DEMM Photo Booths Atlanta",
   description:
     "How DEMM Photo Booths collects, uses, stores, and protects information from guests, event hosts, and website visitors.",

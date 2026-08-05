@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/lead-capture" },
   title: "Lead-Capture Photo Booth for Events in Atlanta | DEMM Photo Booths",
   description:
     "A photo booth experience that helps Atlanta event hosts voluntarily collect guest contact information. For corporate events, brand activations, networking events & more.",

@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/quinceaneras" },
   title: "Quinceañera Photo Booth Rental Atlanta | DEMM Photo Booths",
   description:
     "Make your quinceañera unforgettable with a luxury mirror photo booth in Atlanta. Serving Norcross, Duluth, Lawrenceville & all of Metro Atlanta. Custom prints, professional attendant.",

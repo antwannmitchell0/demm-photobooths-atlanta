@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/weddings" },
   title: "Luxury Wedding Photo Booth Rental Atlanta | DEMM Photo Booths",
   description:
     "Make your Atlanta wedding reception unforgettable. Premium magic mirror photo booth rentals with studio lighting, custom prints, guestbook options & instant digital sharing across Metro Atlanta.",

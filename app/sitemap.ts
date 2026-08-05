@@ -2,13 +2,14 @@ import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.demmphotobooths.com'
-  const now = new Date().toISOString()
+  // Fixed date — bump when page content materially changes so crawlers trust it
+  const lastModified = new Date('2026-08-05')
 
   return [
     // ── Hub ──────────────────────────────────────────────────────────
     {
       url: baseUrl,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
@@ -17,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Lead-capture is the primary differentiator — highest priority after homepage
     {
       url: `${baseUrl}/lead-capture`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.95,
     },
@@ -25,25 +26,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // ── Core Event Pages ─────────────────────────────────────────────
     {
       url: `${baseUrl}/weddings`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/corporate-events`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/quinceaneras-sweet-16`,
-      lastModified: now,
+      url: `${baseUrl}/event-planners`,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/quinceaneras-sweet-16`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/quinceaneras`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/birthdays`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/celebrations`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
@@ -51,24 +70,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // ── Educational Pillar ───────────────────────────────────────────
     {
       url: `${baseUrl}/atlanta-photo-booth-guide`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
 
+    // ── City Pages (local SEO) ───────────────────────────────────────
+    {
+      url: `${baseUrl}/alpharetta`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/marietta`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sandy-springs`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/duluth`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/norcross`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
 
     // ── Legal ────────────────────────────────────────────────────────
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-
-    // ── Phase 2 City Pages (activate after foundation pages are solid) ─
-    // Uncomment each when the page has been fully rewritten to meet quality standard
-    // { url: `${baseUrl}/alpharetta`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/marietta`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    // { url: `${baseUrl}/duluth-norcross`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
   ]
 }

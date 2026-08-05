@@ -37,10 +37,25 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.demmphotobooths.com/#business",
     "name": "DEMM Photo Booths",
+    "alternateName": "DEMM Photo Booths Atlanta",
     "description": "Luxury mirror photo booth rentals for weddings, corporate events, quinceañeras, birthdays, and brand activations across Metro Atlanta, Georgia.",
     "telephone": "+1-813-214-8098",
+    "email": "info@demmmarketing.com",
     "url": "https://www.demmphotobooths.com",
+    "image": "https://www.demmphotobooths.com/images/hero-energy.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.749,
+      "longitude": -84.388
+    },
     "areaServed": [
       "Atlanta, GA", "Buckhead", "Midtown Atlanta", "Alpharetta, GA",
       "Marietta, GA", "Sandy Springs, GA", "Duluth, GA", "Norcross, GA",
@@ -49,6 +64,36 @@ export default function Home() {
       "Cobb County", "Gwinnett County", "DeKalb County"
     ],
     "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Photo Booth Experiences",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Luxury Mirror Photo Booth Rental",
+            "description": "Full-length interactive mirror photo booth with professional lighting, custom event design, instant digital sharing, and a professional attendant for the entire event."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Lead-Capture Photo Booth for Business Events",
+            "description": "Photo booth experience with optional, clearly disclosed guest registration for corporate events, networking events, grand openings, and brand activations."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Wedding Photo Booth Experience",
+            "description": "Elegant photo booth experience for Atlanta weddings with custom prints, backdrops, and a professional host from setup through breakdown."
+          }
+        }
+      ]
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
@@ -56,10 +101,28 @@ export default function Home() {
     }
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.demmphotobooths.com/#faq",
+    "mainEntity": faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      "name": question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": answer,
+      },
+    })),
+  };
+
   return <main>
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
     />
 
     <header className="nav"><a className="brand" href="#top"><span>DEMM</span><small>PHOTO BOOTHS • ATLANTA</small></a><nav aria-label="Main navigation"><a href="/weddings">Weddings</a><a href="/quinceaneras-sweet-16">Quinceañeras</a><a href="/corporate-events">Corporate</a><a href="/celebrations">Parties</a><a href="/lead-capture" style={{fontWeight:700}}>Lead Capture ✦</a><a href="https://www.welcome2atlantaevents.com/find" target="_blank" rel="noopener noreferrer">Find My Photos</a><a href="#faq">FAQ</a></nav><a className="button small" href="#quote">Check My Date</a></header>

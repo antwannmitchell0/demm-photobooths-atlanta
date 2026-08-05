@@ -1,8 +1,52 @@
+# DEMM Photo Booths Atlanta — robots.txt
+# All crawlers welcome. Answer engines & AI assistants explicitly allowed below.
+
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Sitemap location
+# ── Search engines ──────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# ── AI assistants & answer engines (AEO) ────────
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ── Discovery ───────────────────────────────────
 Sitemap: https://www.demmphotobooths.com/sitemap.xml
 
-# Block any admin or API routes
-Disallow: /api/
+# AI-readable business summary
+# See: https://www.demmphotobooths.com/llms.txt

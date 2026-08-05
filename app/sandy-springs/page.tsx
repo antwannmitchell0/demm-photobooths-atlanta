@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/sandy-springs" },
   title: "Photo Booth Rental Sandy Springs GA | DEMM",
   description:
     "Luxury mirror photo booth rentals in Sandy Springs, GA. Perfect for corporate events, upscale weddings & galas near Buckhead. Serving all of North Fulton. Book today!",

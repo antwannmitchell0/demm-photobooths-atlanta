@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/quinceaneras-sweet-16" },
   title: "Quinceañera & Sweet 16 Photo Booth Rental Atlanta | DEMM",
   description:
     "Luxury mirror photo booth rentals for quinceañeras and sweet 16 celebrations in Metro Atlanta. Serving Norcross, Duluth, Gwinnett County & beyond.",

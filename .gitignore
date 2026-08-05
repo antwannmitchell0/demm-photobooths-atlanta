@@ -6,3 +6,6 @@ build
 .env
 .env.local
 *.log
+
+# Vercel local metadata & pulled env — never commit
+.vercel

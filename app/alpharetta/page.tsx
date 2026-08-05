@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/alpharetta" },
   title: "Photo Booth Rental Alpharetta GA | DEMM Photo Booths",
   description:
     "Premium luxury mirror photo booth rentals in Alpharetta, GA. Serving weddings, corporate events & private parties at Avalon, The Gathering Spot & more. Book today!",

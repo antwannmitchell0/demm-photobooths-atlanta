@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/duluth" },
   title: "Photo Booth Rental Duluth GA | DEMM Photo Booths",
   description:
     "Luxury mirror photo booth rentals in Duluth, GA. Serving events at Infinite Energy Center, weddings, quinceañeras & corporate parties in Gwinnett County. Book now!",

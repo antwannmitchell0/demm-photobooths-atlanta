@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/marietta" },
   title: "Photo Booth Rental Marietta GA | DEMM Photo Booths",
   description:
     "DEMM Photo Booths delivers luxury mirror photo booth rentals in Marietta, GA. Perfect for Cobb Galleria events, weddings & corporate parties. Serving all of Cobb County.",

@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/corporate-events" },
   title: "Corporate Event Photo Booth Rental Atlanta | DEMM Photo Booths",
   description:
     "Premium photo booth rentals for corporate events in Metro Atlanta. Custom branding, lead-capture guest registration, COI insurance, and professional setup. Get a quote.",

@@ -3,6 +3,7 @@ import AIEventConcierge from "../components/AIEventConcierge";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/birthdays" },
   title: "Birthday Party & Private Event Photo Booth Rental Atlanta | DEMM Photo Booths",
   description:
     "Make your birthday party or private celebration epic! High-energy mirror photo booth rentals with studio lighting, fun prop packages & instant phone sharing across Metro Atlanta.",

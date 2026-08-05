@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
-  title: "The Complete Guide to Renting a Photo Booth in Atlanta (2025)",
+  alternates: { canonical: "/atlanta-photo-booth-guide" },
+  title: "The Complete Guide to Renting a Photo Booth in Atlanta (2026)",
   description:
     "Everything Atlanta event planners need to know before renting a photo booth — pricing factors, booth types, space requirements, lead capture, and what to ask any vendor.",
 };
