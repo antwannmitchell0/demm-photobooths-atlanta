@@ -815,7 +815,7 @@ export default function AtlantaPhotoBoothGuide() {
                 114+ Google reviews · 5.0 stars · Serving Metro Atlanta
               </p>
               <p>
-                Call us: <a href="tel:813-214-8098" style={{ color: "#fff" }}>813-214-8098</a>
+                Call us: <a href="tel:813-451-0626" style={{ color: "#fff" }}>813-451-0626</a>
               </p>
             </div>
           </div>

@@ -41,7 +41,7 @@ export default function Home() {
     "name": "DEMM Photo Booths",
     "alternateName": "DEMM Photo Booths Atlanta",
     "description": "Luxury mirror photo booth rentals for weddings, corporate events, quinceañeras, birthdays, and brand activations across Metro Atlanta, Georgia.",
-    "telephone": "+1-813-214-8098",
+    "telephone": "+1-813-451-0626",
     "email": "info@demmmarketing.com",
     "url": "https://www.demmphotobooths.com",
     "image": "https://www.demmphotobooths.com/images/hero-energy.png",

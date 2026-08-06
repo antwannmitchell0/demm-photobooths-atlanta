@@ -48,7 +48,7 @@ export default function WeddingsPage() {
       "provider": {
         "@type": "LocalBusiness",
         "name": "DEMM Photo Booths Atlanta",
-        "telephone": "+1-813-214-8098",
+        "telephone": "+1-813-451-0626",
         "url": "https://www.demmphotobooths.com",
       },
       "areaServed": "Atlanta, Buckhead, Midtown, Alpharetta, Sandy Springs, Decatur, Metro Atlanta",

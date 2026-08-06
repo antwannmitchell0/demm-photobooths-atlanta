@@ -46,7 +46,7 @@ export default function LeadCapturePage() {
     provider: {
       "@type": "LocalBusiness",
       name: "DEMM Photo Booths Atlanta",
-      telephone: "+1-813-214-8098",
+      telephone: "+1-813-451-0626",
       url: "https://www.demmphotobooths.com",
     },
     areaServed: "Metro Atlanta, Georgia",
@@ -353,7 +353,7 @@ export default function LeadCapturePage() {
           <div className="promise">
             <b>114+ Google reviews · 5.0 stars · Serving Metro Atlanta</b>
             <span>
-              Prefer to call? <a href="tel:8132148098" style={{ color: "inherit", textDecoration: "underline" }}>813-214-8098</a>
+              Prefer to call? <a href="tel:8134510626" style={{ color: "inherit", textDecoration: "underline" }}>813-451-0626</a>
             </span>
           </div>
         </div>

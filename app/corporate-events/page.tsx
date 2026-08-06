@@ -47,7 +47,7 @@ export default function CorporateEventsPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "DEMM Photo Booths Atlanta",
-      "telephone": "+1-813-214-8098",
+      "telephone": "+1-813-451-0626",
       "url": "https://www.demmphotobooths.com",
     },
     "areaServed": "Metro Atlanta, Fulton County, Cobb County, Gwinnett County, DeKalb County, Georgia",
@@ -266,7 +266,7 @@ export default function CorporateEventsPage() {
           <div className="promise" style={{ marginTop: "2rem" }}>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
               <span style={{ padding: "0.5rem 1rem", background: "rgba(255,255,255,0.1)", borderRadius: "4px" }}>⭐ 135 Google Reviews · 5.0 Stars</span>
-              <span style={{ padding: "0.5rem 1rem", background: "rgba(255,255,255,0.1)", borderRadius: "4px" }}>📞 813-214-8098</span>
+              <span style={{ padding: "0.5rem 1rem", background: "rgba(255,255,255,0.1)", borderRadius: "4px" }}>📞 813-451-0626</span>
               <span style={{ padding: "0.5rem 1rem", background: "rgba(255,255,255,0.1)", borderRadius: "4px" }}>⏱️ Typical response within 1 business day</span>
             </div>
           </div>

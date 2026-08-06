@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
           DEMM Photo Booths is a photo booth rental and event photography service operating
           throughout Metro Atlanta, Georgia. We are a service-area business — we travel to
           event venues and do not operate a public storefront. We can be reached at{" "}
-          <a href="tel:+18132148098" style={{ color: "#6b46c1" }}>813-214-8098</a> or through the
+          <a href="tel:+18134510626" style={{ color: "#6b46c1" }}>813-451-0626</a> or through the
           contact form at{" "}
           <a href="/" style={{ color: "#6b46c1" }}>demmphotobooths.com</a>.
         </p>
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
         </ul>
         <p>
           To exercise any of these rights, contact us at{" "}
-          <a href="tel:+18132148098" style={{ color: "#6b46c1" }}>813-214-8098</a> or through
+          <a href="tel:+18134510626" style={{ color: "#6b46c1" }}>813-451-0626</a> or through
           our website contact form. We will respond within 30 days. If you shared your
           information with an event host through our guest-registration feature, please contact
           that event host directly regarding their use of your information.
@@ -210,7 +210,7 @@ export default function PrivacyPolicy() {
         <p style={{ margin: "0 0 4px" }}>Metro Atlanta, Georgia (Service-Area Business)</p>
         <p style={{ margin: "0 0 4px" }}>
           Phone:{" "}
-          <a href="tel:+18132148098" style={{ color: "#6b46c1" }}>813-214-8098</a>
+          <a href="tel:+18134510626" style={{ color: "#6b46c1" }}>813-451-0626</a>
         </p>
         <p style={{ margin: 0 }}>
           Website:{" "}

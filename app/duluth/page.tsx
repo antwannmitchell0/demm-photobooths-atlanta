@@ -48,7 +48,7 @@ export default function DuluthPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "DEMM Photo Booths Atlanta",
-      "telephone": "+1-813-214-8098",
+      "telephone": "+1-813-451-0626",
       "url": "https://www.demmphotobooths.com/duluth",
     },
     "areaServed": "Duluth, GA, Gwinnett County, Suwanee, Buford, Peachtree Corners, Metro Atlanta",
