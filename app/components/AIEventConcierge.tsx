@@ -21,10 +21,34 @@ interface UserData {
 
 async function submitLead(data: Partial<UserData>) {
   try {
+    (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag?.(
+      "event",
+      "conversion",
+      {
+        send_to: "AW-17515840387/TLX5CK6txOQcEIOHmqBB",
+        value: 1.0,
+        currency: "USD",
+      }
+    );
+  } catch {
+    // tag blocked or not loaded — lead still captured
+  }
+  try {
+    let gclid = "";
+    let source = "";
+    try {
+      const params = new URLSearchParams(window.location.search);
+      gclid = params.get("gclid") || sessionStorage.getItem("demm_gclid") || "";
+      source = params.get("utm_source") || sessionStorage.getItem("demm_utm_source") || "";
+      if (params.get("gclid")) sessionStorage.setItem("demm_gclid", params.get("gclid")!);
+      if (params.get("utm_source")) sessionStorage.setItem("demm_utm_source", params.get("utm_source")!);
+    } catch {
+      // storage unavailable — send without attribution
+    }
     await fetch("/api/quote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data, gclid, source }),
     });
   } catch {
     // silent — lead captured regardless

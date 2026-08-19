@@ -1,12 +1,67 @@
 import { NextRequest, NextResponse } from "next/server";
+import crypto from "crypto";
+
+async function appendToLeadsSheet(row: string[]) {
+  const saEmail = process.env.GOOGLE_SA_EMAIL;
+  const saKey = process.env.GOOGLE_SA_PRIVATE_KEY;
+  const sheetId = process.env.LEADS_SHEET_ID;
+  if (!saEmail || !saKey || !sheetId) return;
+
+  const now = Math.floor(Date.now() / 1000);
+  const enc = (o: object) => Buffer.from(JSON.stringify(o)).toString("base64url");
+  const unsigned = `${enc({ alg: "RS256", typ: "JWT" })}.${enc({
+    iss: saEmail,
+    scope: "https://www.googleapis.com/auth/spreadsheets",
+    aud: "https://oauth2.googleapis.com/token",
+    iat: now,
+    exp: now + 3600,
+  })}`;
+  const signature = crypto
+    .createSign("RSA-SHA256")
+    .update(unsigned)
+    .sign(saKey.replace(/\\n/g, "\n"), "base64url");
+
+  const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${unsigned}.${signature}`,
+  });
+  const { access_token } = await tokenRes.json();
+  if (!access_token) return;
+
+  await fetch(
+    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/A1:append?valueInputOption=RAW`,
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${access_token}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ values: [row] }),
+    }
+  );
+}
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { name, email, phone, eventType, date, venue, guests, vision } = body;
+  const { name, email, phone, eventType, date, venue, guests, vision, source, gclid } = body;
 
   if (!name || !email) {
     return NextResponse.json({ error: "Name and email are required." }, { status: 400 });
   }
+
+  const leadSource = gclid ? "google-ads" : source || "website";
+  await appendToLeadsSheet([
+    new Date().toISOString(),
+    leadSource,
+    name,
+    phone || "",
+    email,
+    eventType || "",
+    date || "",
+    venue || "",
+    guests || "",
+    vision || "",
+    gclid || "",
+    "",
+  ]).catch(() => {});
 
   const resendKey = process.env.RESEND_API_KEY;
   if (!resendKey) {
