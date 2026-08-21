@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import AIEventConcierge from "../components/AIEventConcierge";
+import WeddingDateCheckForm from "../components/WeddingDateCheckForm";
 import GoogleReviewsTicker from "../components/GoogleReviewsTicker";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/weddings" },
   title: "Luxury Wedding Photo Booth Rental Atlanta | DEMM Photo Booths",
   description:
-    "Make your Atlanta wedding reception unforgettable. Premium magic mirror photo booth rentals with studio lighting, custom prints, guestbook options & instant digital sharing across Metro Atlanta.",
+    "Make your Atlanta wedding reception unforgettable. Premium magic mirror photo booth rentals with studio lighting, custom prints, digital sharing & dedicated attendant across Metro Atlanta.",
   keywords: [
     "Wedding Photo Booth Rental Atlanta",
-    "Luxury Wedding Photo Booth Atlanta",
-    "Atlanta Wedding Reception Entertainment",
+    "Atlanta Wedding Photo Booth",
+    "Photo Booth Rental Atlanta Wedding",
     "Mirror Photo Booth Wedding Atlanta",
-    "Buckhead Wedding Photo Booth",
+    "Wedding Reception Photo Booth Atlanta",
   ],
 };
 
@@ -22,8 +22,8 @@ const weddingFaqs = [
     "Your wedding day is one-of-a-kind. We provide a luxury floor-to-ceiling mirror booth, professional DSLR photo quality, studio lighting, custom branded print overlays matching your wedding aesthetic, and a dedicated host who engages your guests so you can relax and celebrate.",
   ],
   [
-    "Can we get a physical memory guestbook for our wedding?",
-    "Yes! We offer a premium wedding memory album. Our attendant prints an extra photo strip from every session, places it in your keepsake guestbook, and assists guests with leaving personal handwritten notes for you to take home at the end of the night.",
+    "How does the $200 booking deposit work?",
+    "Your $200 deposit reserves and locks in your wedding date. The entire $200 deposit is applied directly toward your package total ($349 balance remaining for the $549 Photo Booth Machine, or $549 balance remaining for the $749 Machine + Unlimited Prints package).",
   ],
   [
     "Can our photo print design match our wedding invitations?",
@@ -79,11 +79,9 @@ export default function WeddingsPage() {
         <nav aria-label="Wedding navigation">
           <a href="/">Home</a>
           <a href="#experience">The Experience</a>
+          <a href="#packages">Packages & Pricing</a>
           <a href="/corporate-events">Corporate</a>
           <a href="/celebrations">Parties</a>
-          <a href="https://www.welcome2atlantaevents.com/find" target="_blank" rel="noopener noreferrer">
-            Find My Photos
-          </a>
           <a href="#faq">FAQ</a>
         </nav>
         <a className="button small" href="#quote">
@@ -98,20 +96,18 @@ export default function WeddingsPage() {
         <div className="hero-inner">
           <p className="eyebrow">LUXURY ATLANTA WEDDING EXPERIENCES</p>
           <h1>
-            Your Wedding Reception Deserves <em>Unforgettable Energy.</em>
+            You Spend Months Planning A Wedding That Passes In A Few Hours.
           </h1>
           <p className="lead">
-            Flattering studio lighting, custom monogrammed prints, physical keepsake guestbooks, and an attendant who keeps your guests smiling—all handled seamlessly.
+            The laughs, pictures, friends, and family are the memories that remain. DEMM Photobooths gives your guests an unforgettable way to celebrate together.
           </p>
           <div className="actions">
             <a className="button" href="#quote">
-              Check Date & Get Custom Wedding Quote
+              CHECK YOUR WEDDING DATE
             </a>
             <a
               className="button secondary"
-              href="https://www.welcome2atlantaevents.com/find"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#packages"
               style={{
                 background: "rgba(255,255,255,0.1)",
                 border: "1px solid rgba(255,255,255,0.25)",
@@ -119,13 +115,13 @@ export default function WeddingsPage() {
                 marginLeft: "12px",
               }}
             >
-              Access Event Gallery ↗
+              View Packages ($549 / $749)
             </a>
           </div>
           <div className="trust">
             <span>DSLR Studio Quality</span>
             <span>Custom Monogram Overlay</span>
-            <span>Keepsake Memory Guestbook</span>
+            <span>Instant Digital Sharing</span>
             <span>On-Site Attendant</span>
           </div>
         </div>
@@ -160,16 +156,84 @@ export default function WeddingsPage() {
         <div>
           <p className="eyebrow">THE WEDDING EXPERIENCE</p>
           <h2>
-            More Than Photos. <em>A Keepsake Experience.</em>
+            More Than Photos. <em>A Keepsake Celebration.</em>
           </h2>
         </div>
         <div>
           <p className="large">
-            From your cocktail hour to the final dance, DEMM creates an interactive experience that gets your guests off their feet, laughing together, and taking home a physical print they'll frame on their fridge forever.
+            From your cocktail hour to the final dance, DEMM creates an interactive experience that gets your guests off their feet, laughing together, and sharing stunning high-res photos instantly.
           </p>
           <ul className="checks">
-            <li>Floor-to-ceiling interactive Magic Mirror design</li><li>Studio-grade DSLR photos with flattering beauty lighting</li><li>Customized print layout matching your wedding invitations</li><li>Instant SMS/Email photo sharing for your guests</li><li>Handcrafted wedding scrapbook guestbook option<br/><a href="/atlanta-photo-booth-guide" style={{color: '#a78bfa', fontSize: '13px'}}>Read the complete Atlanta photo booth guide →</a></li><li>Dressed-for-the-occasion professional on-site attendant</li>
+            <li>Floor-to-ceiling interactive Magic Mirror design</li>
+            <li>Studio-grade DSLR photos with flattering beauty lighting</li>
+            <li>Customized print layout matching your wedding aesthetic</li>
+            <li>Instant SMS and Email photo sharing for your guests</li>
+            <li>Dressed-for-the-occasion professional on-site attendant</li>
           </ul>
+        </div>
+      </section>
+
+      {/* Transparent Wedding Packages Section */}
+      <section className="section" id="packages" style={{ padding: "80px 24px", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: "48px" }}>
+          <p className="eyebrow">CLEAR & TRANSPARENT PRICING</p>
+          <h2 style={{ fontSize: "2.6rem", marginBottom: "16px" }}>
+            Simple Wedding Packages. <em>No Hidden Surprises.</em>
+          </h2>
+          <p style={{ color: "#94a3b8", fontSize: "1.1rem", maxWidth: "680px", margin: "0 auto" }}>
+            Reserve your wedding date with a <strong>$200 deposit</strong> applied directly toward your package total.
+          </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "28px", alignItems: "stretch" }}>
+          {/* Base Package */}
+          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "36px 30px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ color: "#a78bfa", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "1.5px", marginBottom: "12px", textTransform: "uppercase" }}>Essential Digital Experience</div>
+              <h3 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: "12px" }}>Photo Booth Machine</h3>
+              <div style={{ fontSize: "2.8rem", fontWeight: 800, color: "#fff", marginBottom: "8px" }}>$549 <span style={{ fontSize: "1rem", color: "#94a3b8", fontWeight: 400 }}>total</span></div>
+              <p style={{ color: "#cbd5e1", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "24px" }}>
+                Complete luxury mirror booth experience with interactive touch screen, DSLR camera, flattering studio lighting, and instant digital sharing.
+              </p>
+              <ul className="checks" style={{ marginBottom: "24px", fontSize: "0.95rem" }}>
+                <li>Full wedding reception mirror booth service</li>
+                <li>DSLR studio camera + beauty ring lighting</li>
+                <li>Custom digital overlay matching wedding theme</li>
+                <li>Instant SMS & Email sharing for guests</li>
+                <li>Professional on-site attendant</li>
+                <li>$200 deposit to lock date ($349 remaining)</li>
+              </ul>
+            </div>
+            <a className="button secondary" href="#quote" style={{ textAlign: "center", width: "100%", boxSizing: "border-box" }}>
+              Check Date for $549 Package
+            </a>
+          </div>
+
+          {/* Machine + Prints Package */}
+          <div style={{ background: "linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(79, 70, 229, 0.1))", border: "2px solid rgba(167, 139, 250, 0.5)", borderRadius: "16px", padding: "36px 30px", display: "flex", flexDirection: "column", justifyContent: "space-between", position: "relative" }}>
+            <div style={{ position: "absolute", top: "-12px", right: "24px", background: "linear-gradient(135deg, #7c3aed, #a78bfa)", color: "#fff", fontSize: "0.75rem", fontWeight: 800, padding: "4px 12px", borderRadius: "100px", letterSpacing: "1px", textTransform: "uppercase" }}>
+              Most Popular
+            </div>
+            <div>
+              <div style={{ color: "#c4b5fd", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "1.5px", marginBottom: "12px", textTransform: "uppercase" }}>Full Print & Digital Package</div>
+              <h3 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: "12px" }}>Machine + Unlimited Prints</h3>
+              <div style={{ fontSize: "2.8rem", fontWeight: 800, color: "#fff", marginBottom: "8px" }}>$749 <span style={{ fontSize: "1rem", color: "#c4b5fd", fontWeight: 400 }}>total ($549 + $200 prints)</span></div>
+              <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "24px" }}>
+                The complete celebration experience. Everything in the Photo Booth Machine package PLUS high-speed on-site unlimited physical lab-quality prints for every guest.
+              </p>
+              <ul className="checks" style={{ marginBottom: "24px", fontSize: "0.95rem" }}>
+                <li>Everything in the Base Machine package</li>
+                <li>Unlimited 2x6 or 4x6 instant physical prints</li>
+                <li>Custom designed wedding print template</li>
+                <li>Every guest in every photo gets a print</li>
+                <li>High-speed commercial photo printer</li>
+                <li>$200 deposit to lock date ($549 remaining)</li>
+              </ul>
+            </div>
+            <a className="button" href="#quote" style={{ textAlign: "center", width: "100%", boxSizing: "border-box" }}>
+              Check Date for $749 Package
+            </a>
+          </div>
         </div>
       </section>
 
@@ -183,10 +247,10 @@ export default function WeddingsPage() {
         </div>
         <div className="steps">
           {[
-            ["01", "Setup", "DEMM arrives 60–90 minutes before guests. We confirm placement, power, and backdrop position with the venue coordinator. The booth is fully tested before any guests arrive."],
-            ["02", "Cocktail Hour", "The booth is typically most active during cocktail hour when guests have a drink in hand and are ready to have fun. This is when the attendant encourages group participation and energy builds."],
-            ["03", "Reception", "The booth continues through dinner and dancing. We manage guest flow, keep props tidy, and operate the guestbook during quieter moments."],
-            ["04", "End of Night", "Quiet, efficient breakdown after the last photo is taken. We coordinate with the venue on teardown. You leave with your guestbook and the memories."],
+            ["01", "Setup", "DEMM arrives 60–90 minutes before guests. We coordinate placement, power, and backdrop position with the venue. The booth is fully tested before guests enter."],
+            ["02", "Cocktail Hour", "The booth is active during cocktail hour when guests are ready to celebrate. The attendant encourages group photos and high energy."],
+            ["03", "Reception", "The booth continues through dinner and dancing. We manage guest flow, keep props organized, and ensure everyone gets their prints and digital photos."],
+            ["04", "End of Night", "Quiet, seamless breakdown after the final song. Zero hassle for the bride, groom, or family."],
           ].map((x) => (
             <article key={x[0]}>
               <b>{x[0]}</b>
@@ -224,30 +288,6 @@ export default function WeddingsPage() {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="process" id="process">
-        <div className="section-title">
-          <p className="eyebrow">4 EASY STEPS</p>
-          <h2>
-            Reserving Your Wedding Booth <em>Made Simple.</em>
-          </h2>
-        </div>
-        <div className="steps">
-          {[
-            ["01", "Share Your Wedding Details", "Tell us your wedding date, venue, and estimated guest count."],
-            ["02", "Receive Custom Recommendation", "We confirm availability and present tailored packages for your day."],
-            ["03", "Design Your Print Template", "Our designer creates a custom overlay matching your wedding monogram."],
-            ["04", "Celebrate & Relive Memories", "Enjoy your reception while we capture every moment for your guestbook."],
-          ].map((x) => (
-            <article key={x[0]}>
-              <b>{x[0]}</b>
-              <h3>{x[1]}</h3>
-              <p>{x[2]}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       {/* Coverage Area */}
       <section className="area">
         <p className="eyebrow">METRO ATLANTA WEDDING VENUES</p>
@@ -259,34 +299,7 @@ export default function WeddingsPage() {
         </p>
       </section>
 
-      {/* Questions to Ask Before Booking Any Wedding Photo Booth */}
-      <section className="section" id="questions" style={{ padding: "80px 24px", maxWidth: "1200px", margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: "40px" }}>
-          <p className="eyebrow">BE PREPARED</p>
-          <h2 style={{ fontSize: "2.5rem", marginBottom: "16px" }}>
-            Questions to Ask Before Booking <em>Any Wedding Photo Booth.</em>
-          </h2>
-        </div>
-        <div className="steps" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }}>
-          {[
-            "What type of booth is this — open-air, mirror, or enclosed?",
-            "Can I see a physical sample of your print quality and paper?",
-            "Will you provide a custom print design proof before the wedding day?",
-            "Who specifically will be the attendant, and are they the same person setting up?",
-            "What is your process if the equipment fails or the internet goes down?",
-            "Does the quote include setup, breakdown, travel, and print design — or are those separate?",
-            "What is your cancellation and rescheduling policy?",
-            "Do you carry liability insurance and can you provide a COI for the venue?",
-          ].map((q, i) => (
-            <article key={i} style={{ background: "rgba(255,255,255,0.03)", padding: "24px", borderRadius: "12px", border: "1px solid rgba(255,255,255,0.05)", textAlign: "left" }}>
-              <b style={{ color: "#a78bfa", fontSize: "14px", display: "block", marginBottom: "8px" }}>Question {i + 1}</b>
-              <p style={{ margin: 0, fontSize: "16px", lineHeight: "1.5" }}>{q}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* Interactive AI Concierge Quote Form */}
+      {/* Lead Capture Form Section */}
       <section className="quote" id="quote">
         <div className="quote-copy">
           <p className="eyebrow">PLAN YOUR RECEPTION</p>
@@ -294,18 +307,17 @@ export default function WeddingsPage() {
             Check Availability for Your <em>Wedding Date.</em>
           </h2>
           <p className="large">
-            Answer a few quick questions to receive a custom wedding proposal and date confirmation.
+            Enter your wedding details below to confirm availability and lock in your wedding date.
           </p>
           <div className="promise">
-            <b>No Public Pricing Lists.</b>
-            <span>Every wedding package is custom-tailored to your venue and reception timeline.</span>
+            <b>Guaranteed Transparent Pricing.</b>
+            <span>Photo Booth Machine: $549 total. Add Unlimited Prints: +$200 ($749 total). $200 deposit applied to total.</span>
           </div>
         </div>
         <div style={{ flex: 1, display: "flex", justifyContent: "center", width: "100%" }}>
-          <AIEventConcierge />
+          <WeddingDateCheckForm />
         </div>
       </section>
-      <p style={{textAlign:'center', marginTop:'16px', marginBottom: '80px', color:'rgba(255,255,255,0.5)', fontSize:'14px'}}>Also serving <a href='/corporate-events' style={{color:'#a78bfa'}}>corporate events</a>, <a href='/celebrations' style={{color:'#a78bfa'}}>birthday parties</a>, and <a href='/quinceaneras-sweet-16' style={{color:'#a78bfa'}}>quinceañeras & sweet 16s</a> across Metro Atlanta.</p>
 
       {/* FAQs */}
       <section className="faq" id="faq">
@@ -348,7 +360,7 @@ export default function WeddingsPage() {
         <small>© 2026 DEMM Photo Booths Atlanta. All rights reserved. • Wedding Photo Booth Rental Atlanta</small>
       </footer>
       <a className="mobile-cta" href="#quote">
-        Check My Wedding Date
+        CHECK YOUR WEDDING DATE
       </a>
     </main>
   );
